@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.margen_interno{
+    padding: 0 50px;
+}
+
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/*Principal*/
+.header{
+    background: url(media/infernus_tree.jpg);
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+    /*Menu de cabezera*/
+    .menu{
+        background: rgba(0,0, 0, 0.1);
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255,.5);
+    }
+        .logo{
+            flex: 1 1 auto;
+            margin: 17.5px 0px;
+        }
+            .logo a{
+                color: #fff;
+                font-size: 30px;
+            }
+            .logo a:hover{
+                color: #343434;
+            }
+        .nav{
+            flex: 5 1 auto;
+        }
+            .nav a{
+                color: #fff;
+                font-size: 11px;
+                text-transform: uppercase;
+                padding: 10px 20px;
+                letter-spacing: 2px;
+            }
+            .nav a:hover{
+                color: #343434;
+            }
+        .social{
+            flex: 1 1 auto;
+            display: flex;
+        }
+            .social a{
+                font-size: 18px;
+                color: #fff;
+                padding: 0 5px;
+            }
+            .social a:hover{
+                color: #343434;
+            }
+
+/*Contenido principal*/
+    .texto-principal{
+        /* background: #f07b3f */
+        height: 580px;
+        display: flex;
+        align-items: center;
+    }
+        h1{
+            font-family: 'Lora', sans-serif;
+            font-size: 21px;
+            color: #fff;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.6;
+            margin-top: -75px;
+        }
+
+/*Contenido Articulos*/
+.section{
+    background:#f7f7f7;
+    display: flex;
+}
+    .articulos{
+        background: #f7f7f7;
+        display: flex;
+        flex: 2 1 100%;
+        flex-wrap: wrap;
+    }
+        .article{
+            flex: 1 1 45%;
+            color:  #444;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin: 10px 10px 0px 0px;
+            background: #ececec;
+        }
+
+            .article img{
+                width: 100%;
+            }
+            .article h3{
+                color: #fff;
+                font-size: 13px;
+                padding: 10px 0;
+                margin-top: -70px;
+            }
+            .article h2{
+                font-size: 25px;
+                text-transform: uppercase;
+                padding: 0px 0px 10px 0px;
+                color: #fff;
+            }
+            .article p {
+                margin-bottom: 15px;
+            }
+            .article a{
+                display: inline-block;
+                color: #fff;
+                font-size: 13px;
+                padding: 10px;
+                margin: 10px 0px;
+                background: #000;
+            }
+            .article a:hover{
+                background: #546cc3;
+            }
+
+        .navegacion{
+            background: #000;
+            flex: 1 1 100%;
+            margin: 0px 10px 0px 0px;
+        }
+        .navegacion a{
+            color: #fff;
+            font-size: 11px;
+            text-transform: uppercase;
+            padding: 0px 10px;
+            letter-spacing: 2px;
+        }
+
+    /*Contenido Aside*/    
+    .aside{
+        /* background: #f73f52; */
+        flex: 1 1 auto;
+        margin: 10px 5px 10px 0px;
+    }
+    
+        .publicidad{
+            /* background: #ffea85; */
+        }
+        .publicidad h4{
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+        .publicidad img{
+            width: 100%;
+        }
+.footer{
+    display: flex;
+    background: #000;
+    justify-content: center;
+    margin-top: 10px;
+}
+    .pie{
+        /* background: #E6AF2E; */
+        text-align: center;
+    }
+        .pie a{
+            color: #fff;
+            font-size: 11px;
+            text-transform: uppercase;
+            padding: 0px 10px;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+       
+
+@media all and (max-width: 1027px){
+    .section{
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction: column;
+    }
+        .logo{
+            margin: 0px;
+        }
+       
+       
+    .aside{
+        display: flex;
+    }
+        .publicidad{
+            flex: 1 1 100%;
+        }
+}
+
+@media all and (max-width: 740px){
+  
+    .nav{
+        margin: 5.5px;
+    }
+    .nav a{
+        font-size: 25px;
+    }
+    .off{
+        display: none;
+    }
+    
+}
+
+@media all and (max-width: 600px){
+    .articulos{
+        flex-direction: column;
+    }
+    .aside{
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 460px){
+   .nav a{
+    padding: 5px;
+   }
+}
+
+@media all and (max-width: 400px){
+    .aside{
+        flex-direction: column;
+    }
+
+    .texto-principal h1{
+        font-size: 18px;
+    }
+       
+}
